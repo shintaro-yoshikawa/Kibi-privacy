@@ -1,0 +1,260 @@
+<title>Kibi サポート</title>
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --surface-tint: #f3f0e8;
+    --text: #22242a;
+    --text-secondary: #5b5f6b;
+    --text-tertiary: #8a8d97;
+    --accent: #4a55c7;
+    --accent-soft: #eceeff;
+    --border: #e4e1d8;
+    --serif: Georgia, 'Hiragino Mincho ProN', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic',
+      'Segoe UI', sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --bg: #16171d;
+      --surface: #1e2027;
+      --surface-tint: #24262e;
+      --text: #ecebe6;
+      --text-secondary: #a3a7b3;
+      --text-tertiary: #767a86;
+      --accent: #8b93f0;
+      --accent-soft: #2a2c47;
+      --border: #2d2f39;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --bg: #16171d;
+    --surface: #1e2027;
+    --surface-tint: #24262e;
+    --text: #ecebe6;
+    --text-secondary: #a3a7b3;
+    --text-tertiary: #767a86;
+    --accent: #8b93f0;
+    --accent-soft: #2a2c47;
+    --border: #2d2f39;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  header {
+    margin-bottom: 3.5rem;
+  }
+
+  .eyebrow {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin: 0 0 0.9rem;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.8rem;
+    text-wrap: balance;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 60ch;
+  }
+
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .contact a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .contact a:hover,
+  .contact a:focus-visible {
+    border-bottom-color: currentColor;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .faq-heading {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 3.5rem 0 1.5rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-item {
+    padding: 1.8rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-item:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .faq-q {
+    display: flex;
+    gap: 0.7rem;
+    align-items: baseline;
+    margin: 0 0 0.7rem;
+  }
+
+  .faq-q-mark {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--accent);
+    font-size: 1.1rem;
+    flex: none;
+  }
+
+  .faq-q h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .faq-a {
+    margin: 0;
+    padding-left: 1.7rem;
+    max-width: 60ch;
+    color: var(--text-secondary);
+    font-size: 0.97rem;
+  }
+
+  .faq-a strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 520px) {
+    .page {
+      padding: 3rem 1.25rem 4rem;
+    }
+    .contact {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<div class="page">
+  <header>
+    <p class="eyebrow">Support</p>
+    <h1>Kibi サポート</h1>
+    <p class="lede">
+      単語帳アプリ「Kibi」の使い方や、困ったときの対処法をまとめています。ここで解決しない場合は、下記の連絡先までお問い合わせください。
+    </p>
+    <div class="contact">
+      <span>お問い合わせ</span>
+      <a href="mailto:yoshikws@yahoo.co.jp">yoshikws@yahoo.co.jp</a>
+    </div>
+  </header>
+
+  <p class="faq-heading">よくある質問</p>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <span class="faq-q-mark">Q</span>
+      <h2>単語帳のロックを解除できません</h2>
+    </div>
+    <p class="faq-a">
+      単語帳のロックはFace ID・Touch IDで解除します。認証に失敗する場合は、端末の設定アプリでFace ID/Touch IDが正しく登録されているかご確認ください。生体認証が使えない端末では、ロックの解除自体ができない仕様です。
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <span class="faq-q-mark">Q</span>
+      <h2>複数の端末で単語帳が同期されません</h2>
+    </div>
+    <p class="faq-a">
+      同期にはiCloudを使用します。<strong>すべての端末で同じApple IDでサインインしており</strong>、設定アプリの「Apple ID」→「iCloud」でこのアプリ(またはiCloud Drive)がオンになっているかご確認ください。ネットワーク環境によっては反映まで数分かかることがあります。
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <span class="faq-q-mark">Q</span>
+      <h2>未回答の通知が届きません</h2>
+    </div>
+    <p class="faq-a">
+      設定アプリの「通知」からKibiの通知が許可されているかご確認ください。Kibi内の設定画面(歯車アイコン)で、通知のON/OFFと通知時刻も見直してみてください。
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <span class="faq-q-mark">Q</span>
+      <h2>単語や単語帳を誤って削除してしまいました</h2>
+    </div>
+    <p class="faq-a">
+      削除は取り消せません。単語帳を削除すると、中の単語もすべて削除されます。今のところ復元機能はありませんので、削除前の確認メッセージにご注意ください。
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <span class="faq-q-mark">Q</span>
+      <h2>「クイズをしない」に設定した単語帳がテストされません</h2>
+    </div>
+    <p class="faq-a">
+      仕様通りの動作です。詳細は単語帳一覧の「？」アイコンから開けるアプリ内ヘルプをご覧ください。通常のクイズに戻すには、単語帳一覧で該当の単語帳を右にスワイプし、「クイズをする」に切り替えてください。
+    </p>
+  </div>
+
+  <footer>Kibi &mdash; 単語帳アプリ</footer>
+</div>
