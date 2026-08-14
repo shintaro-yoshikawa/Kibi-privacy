@@ -1,0 +1,348 @@
+<title>Kibi プライバシーポリシー</title>
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --surface-tint: #f3f0e8;
+    --text: #22242a;
+    --text-secondary: #5b5f6b;
+    --text-tertiary: #8a8d97;
+    --accent: #4a55c7;
+    --accent-soft: #eceeff;
+    --border: #e4e1d8;
+    --serif: Georgia, 'Hiragino Mincho ProN', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic',
+      'Segoe UI', sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --bg: #16171d;
+      --surface: #1e2027;
+      --surface-tint: #24262e;
+      --text: #ecebe6;
+      --text-secondary: #a3a7b3;
+      --text-tertiary: #767a86;
+      --accent: #8b93f0;
+      --accent-soft: #2a2c47;
+      --border: #2d2f39;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --bg: #16171d;
+    --surface: #1e2027;
+    --surface-tint: #24262e;
+    --text: #ecebe6;
+    --text-secondary: #a3a7b3;
+    --text-tertiary: #767a86;
+    --accent: #8b93f0;
+    --accent-soft: #2a2c47;
+    --border: #2d2f39;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  header {
+    margin-bottom: 3.5rem;
+  }
+
+  .eyebrow {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin: 0 0 0.9rem;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.8rem;
+    text-wrap: balance;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 1.6rem;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 60ch;
+  }
+
+  section {
+    padding: 2.4rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  section:first-of-type {
+    border-top: none;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    margin: 0 0 1rem;
+  }
+
+  .section-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--accent);
+    flex: none;
+    width: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  section > p,
+  section > ul {
+    max-width: 62ch;
+    color: var(--text);
+    font-size: 0.98rem;
+  }
+
+  section > p {
+    margin: 0 0 0.9rem;
+  }
+
+  section > p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0.9rem 0 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  .callout {
+    background: var(--surface-tint);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 1.1rem;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+  }
+
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .contact a:hover,
+  .contact a:focus-visible {
+    border-bottom-color: currentColor;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 520px) {
+    .page {
+      padding: 3rem 1.25rem 4rem;
+    }
+    .contact {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<div class="page">
+  <header>
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Kibi プライバシーポリシー</h1>
+    <p class="lede">
+      単語帳アプリ「Kibi」(以下「本アプリ」)における、利用者情報の取り扱いについて説明します。
+    </p>
+    <div class="meta">
+      <span>制定日: 2026年8月14日</span>
+      <span>最終更新日: 2026年8月14日</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>基本方針</h2>
+    </div>
+    <p>
+      本アプリは、単語帳の作成・学習を端末内で完結させることを基本設計としています。開発者が運営するサーバーは存在せず、利用者が入力した単語帳の内容や学習履歴を開発者が収集・閲覧・保存することはありません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>単語帳データの保存と同期</h2>
+    </div>
+    <p>
+      作成した単語帳・質問・回答・学習の進捗は、端末内にAppleの最も強度の高いファイル保護レベル(Complete Protection)を適用して保存されます。端末がロックされている間は、これらのデータを読み書きできません。
+    </p>
+    <p>
+      複数端末で単語帳を利用する場合は、Appleの iCloud(CloudKit)を通じて、<strong>利用者ご本人のiCloudアカウント内でのみ</strong>同期されます。この同期データは開発者のサーバーを経由せず、開発者がアクセスすることもできません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Face ID / Touch ID</h2>
+    </div>
+    <p>
+      単語帳ごとのロック機能で、Face IDまたはTouch IDによる認証を利用できます。認証はApple端末のOS機能によって端末内で完結し、生体情報そのものが本アプリや開発者に渡されることはありません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2>通知</h2>
+    </div>
+    <p>
+      未回答の単語が残っている場合にお知らせするリマインダー通知は、端末内で処理されるローカル通知です。外部の通知サーバーへ利用者データを送信することはありません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <h2>翻訳機能</h2>
+    </div>
+    <p>
+      質問・回答の翻訳には、Apple標準の翻訳フレームワークを使用しています。翻訳処理の実行主体はAppleであり、その際の情報の取り扱いはApple社のプライバシーポリシーに準じます。
+    </p>
+    <div class="callout">
+      Apple社のプライバシーに関する方針は、Apple公式サイトでご確認いただけます。
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <h2>第三者への提供・広告・解析</h2>
+    </div>
+    <ul>
+      <li>広告の表示は行っていません</li>
+      <li>アクセス解析・行動計測ツールは組み込んでいません</li>
+      <li>利用者データを第三者に販売・提供することはありません</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <h2>お子様のプライバシー</h2>
+    </div>
+    <p>
+      本アプリは特定の年齢層を対象とした個人情報の収集を行っておらず、13歳未満のお子様から意図的に個人情報を収集することはありません。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">08</span>
+      <h2>本ポリシーの変更</h2>
+    </div>
+    <p>
+      本ポリシーの内容は、法令改正やアプリの機能追加に伴い、予告なく変更されることがあります。変更後の内容は、本ページに掲載した時点から効力を持つものとします。
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">09</span>
+      <h2>お問い合わせ</h2>
+    </div>
+    <div class="contact">
+      <span>本アプリ・本ポリシーに関するご質問は、下記までご連絡ください。</span>
+      <a href="mailto:yoshikws@gmail.com">yoshikws@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>Kibi &mdash; 単語帳アプリ</footer>
+</div>
